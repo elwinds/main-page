@@ -1,0 +1,113 @@
+﻿@import '../../../variables.scss';
+
+.container {
+    display: flex;
+    margin: 51px 0 47px 8.2%;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+
+    &--development {
+        margin-left: 6%;
+    }
+
+    &--count {
+        margin-left: 8%;
+    }
+}
+
+.text {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    color: $blackColor;
+}
+
+.value {
+    display: flex;
+    align-items: baseline;
+}
+
+.number {
+    font-weight: 800;
+    font-size: 100px;
+    line-height: 122px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.02em;
+    background-size: cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    &--square {
+        background-image: url('../../../img/bcg-square.jfif');
+        background-position: center;
+    }
+
+    &--development {
+        background-image: url('../../../img/bcg-development.jfif');
+        background-position: bottom;
+    }
+
+    &--count {
+        background-image: url('../../../img/bcg-count.jfif');
+        // background-size: contain;
+        background-position: 0%;
+    }
+}
+
+.meter {
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 44px;
+    color: $lightGreyColor;
+}
+
+@media (max-width: 375px) {
+    .container{
+        margin: 48px 0 40px 4.2%;
+        flex-direction: column;
+    }
+
+    .number {
+        font-size: 80px;
+        line-height: 98px;
+    }
+
+    .meter {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    .item {
+        &--development {
+            margin: 0;
+        }
+
+        &--count {
+            margin: 0;
+        }
+    }
+}
+
+@media (min-width: 375px) and (max-width: 1277px) {
+    .number {
+        font-size: 70px;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 1000px) {
+    .container {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 51px 0 0 0;
+    }
+
+}
+
+
+
+
+

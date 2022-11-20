@@ -1,0 +1,171 @@
+﻿@import '../../variables.scss';
+
+.container {
+    width: 100%;
+    height: 635px;
+    display: flex;
+}
+
+.info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    color: $darkGreyColor;
+}
+
+.title {
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 58px;
+    margin: 49px 0 0 16.4%;
+
+    &--bold{
+        font-weight: 700;
+    }
+}
+
+.description {
+    margin: 39px 0 0 16.4%;
+    width: 77%;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.kilometrs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+
+    &__number {
+        font-weight: 800;
+        font-size: 148px;
+        line-height: 180px;
+        color: $greenColor;
+        height: 148px;
+    }
+
+    &__text {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+        color: $darkGreyColor;
+        margin-top: 15px;
+    }
+}
+
+.map {
+    width: 50%;
+    background: url('../../img/map.png');
+    background-size: 700px 640px;
+}
+
+@media (max-width: 375px) {
+    .container {
+        margin-top: 24px;
+        height: 846px;
+        flex-direction: column;
+    }
+
+    .info {
+        width: 100%;
+    }
+
+    .title {
+        font-size: 28px;
+        line-height: 28px;
+        margin: 0 0 0 4.2%;
+    }
+
+    .description {
+        margin: 24px 0 0 4.2%;
+        font-size: 14px;
+        line-height: 22px;
+        width: 91.4%;
+    }
+
+    .kilometrs {
+        margin-top: 0;
+    }
+
+    .map {
+        width: 100%;
+        height: 340px;
+        background-size: 375px 340px;
+        margin-top: 24px;
+    }
+}
+
+@media (min-width: 1140px) and (max-width: 1270px) {
+    .map {
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .kilometrs {
+        margin-top: 10px;
+        &__number {
+            font-size: 80px;
+            line-height: 80px;
+            height: 80px;
+        }
+    }
+}
+
+@media (min-width: 850px) and (max-width: 1140px) {
+    .container {
+        margin-top: 24px;
+        height: auto;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .kilometrs {
+        position: absolute;
+        left: 65%;
+        top: 10%
+    }
+
+    .info {
+        margin-bottom: 25px;
+    }
+
+    .map {
+        width: 100%;
+        height: 740px;
+        background-size: 100% 740px;
+        background-size: cover;
+        background-position: 20%;
+        background-repeat: no-repeat;
+        margin-top: 24px;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 850px) {
+    .container {
+        margin-top: 24px;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .info {
+        width: 100%;
+    }
+
+    .title {
+        font-size: 28px;
+        line-height: 28px;
+        margin-top: 0 ;
+    }
+
+    .map {
+        width: 100%;
+        height: 740px;
+        background-size: 100% 740px;
+        background-size: cover;
+        background-position: 20%;
+        background-repeat: no-repeat;
+        margin-top: 24px;
+    }
+}
