@@ -23,6 +23,10 @@
     flex-direction: row;
     width: 42.7%;
     margin-left: 6.7%;
+
+    div {
+        text-align: center;
+    }
 }
 
 .links a {
@@ -93,8 +97,4 @@
             margin-top: 16px;
         }
     }
-}
-
-@media (max-width: 375px) {
-
 }

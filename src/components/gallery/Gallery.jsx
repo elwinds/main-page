@@ -1,90 +1,82 @@
 ﻿import React from "react";
 import classes from "./Gallery.module.scss";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
+import Slider from "react-slick";
+
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "red" }}
+      onClick={onClick}
+    />
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "green" }}
+      onClick={onClick}
+    />
+  );
+}
 
 const Gallery = () => {
-    const navigationPrevRef = React.useRef(null);
-    const navigationNextRef = React.useRef(null);
+  const slickSettings = {
+    className: "center",
+    centerMode: true,
+    infinite: true,
+    centerPadding: "60px",
+    slidesToShow: 4,
+    speed: 500,
+    edgeFriction: true,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
 
   return (
-    <div id='gallery' className={classes.container}>
-      <Swiper
-        slidesPerView={3}
-        effect={"flip"}
-        flipEffect={{ slideShadows: true, limitRotation: true }}
-        spaceBetween={10}
-        slidesPerGroup={5}
-        loop={true}
-        loopFillGroupWithBlank={true}
-        navigation={{
-          prevEl: navigationPrevRef.current,
-          nextEl: navigationNextRef.current,
-        }}
-        onBeforeInit={(swiper) => {
-          swiper.params.navigation.prevEl = navigationPrevRef.current;
-          swiper.params.navigation.nextEl = navigationNextRef.current;
-        }}
-        modules={[Navigation]}
-        className={classes.swiper}
-      >
-        <SwiperSlide>
-          <img
-            className={classes.img}
-            src={require("../../img/gallery/1.png")}
-            alt="view"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          {" "}
-          <img
-            className={classes.img}
-            src={require("../../img/gallery/2.png")}
-            alt="view"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          {" "}
-          <img
-            className={classes.img}
-            src={require("../../img/gallery/3.png")}
-            alt="view"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          {" "}
-          <img
-            className={classes.img}
-            src={require("../../img/gallery/4.png")}
-            alt="view"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          {" "}
-          <img
-            className={classes.img}
-            src={require("../../img/gallery/5.png")}
-            alt="view"
-          />
-        </SwiperSlide>
-      </Swiper>
-      <div ref={navigationPrevRef}>
+    <div id="gallery" className={classes.container}>
+      <div className={classes.shadowleft}></div>
+      <div className={classes.shadowright}></div>
+      <Slider {...slickSettings}>
         <img
-          className={[classes.arrow, classes["arrow--back"]].join(" ")}
-          src={require("../../img/arrow-back.png")}
+          className={classes.img}
+          src={require("../../img/gallery/33.png")}
           alt="view"
         />
-      </div>
-      <div ref={navigationNextRef}>
         <img
-          className={[classes.arrow, classes["arrow--next"]].join(" ")}
-          src={require("../../img/arrow.png")}
+          className={classes.img}
+          src={require("../../img/gallery/44.png")}
           alt="view"
         />
-      </div>
+        <img
+          className={classes.img}
+          src={require("../../img/gallery/55.png")}
+          alt="view"
+        />
+        <img
+          className={classes.img}
+          src={require("../../img/gallery/11.png")}
+          alt="view"
+        />
+        <img
+          className={classes.img}
+          src={require("../../img/gallery/22.png")}
+          alt="view"
+        />
+      </Slider>
     </div>
   );
 };

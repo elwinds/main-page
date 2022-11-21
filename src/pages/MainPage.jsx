@@ -8,10 +8,10 @@ import Header from "../components/header/Header";
 import History from "../components/history/History";
 import Infrustructure from "../components/infrustructure/Infrastructure";
 import Map from "../components/map/Map";
+import MorePhoto from "../components/more-photo/MorePhoto";
 import Plan from "../components/plan/Plan";
 import Scheme from "../components/scheme/Scheme";
 import Speech from "../components/speech/Speech";
-// import ScrollableAnchor from "react-scrollable-anchor";
 
 const MainPage = () => {
   return (
@@ -26,6 +26,7 @@ const MainPage = () => {
       <Plan />
       <Scheme />
       <Gallery />
+      <MorePhoto/>
       <Map />
       <Footer />
     </>

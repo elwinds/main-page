@@ -1,0 +1,17 @@
+﻿@import '../../variables.scss';
+
+.container {
+    height: 90px;
+    color: $greenColor;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    padding: 24px 0 0 4.2%;
+    cursor: pointer;
+}
+
+@media (min-width: 600px) {
+    .container {
+        display: none;
+    }
+}

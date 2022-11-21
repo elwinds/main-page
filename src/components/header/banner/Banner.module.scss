@@ -27,9 +27,16 @@
         font-size: 56px;
         line-height: 58px;
         margin-top: 64px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
 
         &--bold {
             font-weight: 700;
+        }
+
+        &--medium {
+            width: 70%;
         }
     }
 
@@ -72,77 +79,27 @@
     padding: 43px 6.8% 0 6.4%;
 }
 
-@media (max-width: 375px) {
-    .container {
-        width: 100%;
-        height: 256px;
-        justify-content: flex-end;
-        padding: 24px 4% 0 14.4%;
-    }
-
-    .info {
-        margin: 0;
-
-    &__title {
-        font-size: 32px;
-        line-height: 103.61%;
-        margin: 0;
-        width: 95%;//
-    }
-
-    &__title br {
-        display: none;
-    }
-
-    &__mail {
-        display: none;
-    }
-
-    &__description {
-        display: none;
-    }
-    }
-
-    .tel {
-        display: none;
-    }
-
-    .footer {
-        margin-top: 67px;
-
-        &__img {
-            width: 19.2%;
-            margin-left: 46.6%;
-        }
-
-        &__text {
-            display: none;
-        }
-    }
-}
-
 @media (max-width: 1000px) {
     .container {
         width: 100%;
         height: 400px;
         justify-content: flex-end;
-        padding: 24px 4% 0 14.4%;
+        padding: 24px 2% 0 0%;
         background-position: 20%;
         margin-top: 10px;
     }
 
     .info {
-        margin-top: 70px;
+        margin-top: 24px;
 
         &__title {
             font-size: 32px;
             line-height: 103.61%;
-            margin: 0;
-            width: 65%; //
-        }
+            margin-right: 0;
 
-        &__title br {
-            display: none;
+            &--medium {
+                width: auto;
+            }
         }
 
         &__mail {
@@ -178,6 +135,51 @@
     }
 
     .info {
-        margin-right: 7%;
+        margin-right: 8%;
+    }
+}
+
+@media (max-width: 376px) {
+    .container {
+        width: 100%;
+        height: 256px;
+        justify-content: flex-end;
+        padding: 24px 4% 0 0%;
+    }
+
+    .info {
+        margin: 0;
+
+        &__title {
+            font-size: 32px;
+            line-height: 103.61%;
+            margin: 0;
+            width: 95%;
+        }
+
+        &__mail {
+            display: none;
+        }
+
+        &__description {
+            display: none;
+        }
+    }
+
+    .tel {
+        display: none;
+    }
+
+    .footer {
+        margin-top: 85px;
+
+        &__img {
+            width: 19.2%;
+            margin-left: 56.6%;
+        }
+
+        &__text {
+            display: none;
+        }
     }
 }

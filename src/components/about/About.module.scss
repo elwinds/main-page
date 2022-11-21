@@ -45,14 +45,13 @@
     margin-left: 3%;
 }
 
-
 .img {
     width: 50%;
     height: 455px;
     margin-top: 34px;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 376px) {
     .info {
         margin: 40px 4.2% 0 4.2%;
         width: 100%;
@@ -80,7 +79,7 @@
     }
 }
 
-@media (min-width: 375px) and (max-width: 1200px) {
+@media (min-width: 376px) and (max-width: 1200px) {
     .img {
         display: none;
     }

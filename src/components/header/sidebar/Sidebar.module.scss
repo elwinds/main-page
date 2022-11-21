@@ -39,8 +39,8 @@
         text-decoration: none;
 
         &:visited {
-                color: $blackColor;
-            }
+            color: $blackColor;
+        }
     }
 }
 
@@ -88,13 +88,3 @@
     }
 }
 
-// @media (max-width: 1000px) {
-//     .img {
-//         width: 80%;
-//         height: auto;
-//     }
-
-//     .booklet {
-//         display: none;
-//     }
-// }

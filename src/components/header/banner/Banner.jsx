@@ -7,7 +7,9 @@ const Banner = () => {
       <div className={classes.info}>
         <span className={classes.info__mail}>5378082@mail.ru</span>
         <div className={classes.info__title}>
-          <div>Коттеджный поселок классаDe luxe</div>
+          <div className={classes["info__title--medium"]}>
+            Коттеджный поселок класса <br /> De luxe
+          </div>
           <span className={classes["info__title--bold"]}>«Усадьба Бергов»</span>
         </div>
         <div className={classes.info__description}>
